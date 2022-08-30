@@ -16,8 +16,6 @@ class Operations:
         print(str(a) + " / " + str(b) + " = " + str(answer))
 
 while True:
-    print("A. Addition \nB. Substaction \nC. Multiplication \nD. Division \nE. Exit")
-
     choice = input("Input your choice: ")
 
     a = int(input("Input first number: "))
@@ -25,17 +23,21 @@ while True:
 
     opr = Operations()
 
-    if choice =="a" or choice == "A":
-        print("Addition" + str(opr.add()))
-    elif choice == "b" or choice == "B":
-        print("Substration" + opr.sub())
-    elif choice == "c" or choice == "C":
-        print("Multiplication" + opr.mul())
-    elif choice == "d" or choice == "D":
-        print("Division" +  opr.div())
-    elif choice == "e" or choice == "E":
+    def menu():
+        x=("A. Addition \nB. Substaction \nC. Multiplication \nD. Division \nE. Exit")
+        print(x)
+    menu()
+
+    if choice == "e" or choice == "E":
         print("Program ended")
         quit()
+    elif choice =="a" or choice == "A":
+        print("Addition" + str(opr.add()) + "\n")
+    elif choice == "b" or choice == "B":
+        print("Substration" + opr.sub() + "\n")
+    elif choice == "c" or choice == "C":
+        print("Multiplication" + opr.mul() + "\n")
+    elif choice == "d" or choice == "D":
+        print("Division" +  opr.div() + "\n")
     else:
         print("Invalid choice")
-
