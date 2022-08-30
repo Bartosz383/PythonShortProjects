@@ -1,17 +1,17 @@
 class Operations:
-    def add(a, b):
+    def add(self):
         answer = a + b
         print(str(a) + " + " + str(b) + " = " +str(answer))
 
-    def sub(a, b):
+    def sub(self):
         answer = a - b
         print(str(a) + " - " + str(b) + " = " + str(answer))
 
-    def mul(a, b):
+    def mul(self):
         answer = a * b
         print(str(a) + " * " + str(b) + " = " + str(answer))
 
-    def div(a, b):
+    def div(self):
         answer = a / b
         print(str(a) + " / " + str(b) + " = " + str(answer))
 
@@ -20,26 +20,23 @@ while True:
 
     choice = input("Input your choice: ")
 
+    a = int(input("Input first number: "))
+    b = int(input("Input second number: "))
+
+    opr = Operations()
+
     if choice =="a" or choice == "A":
         print("Addition")
-        a = int(input("Input first number: "))
-        b = int(input("Input second number: "))
-        Operations.add(a, b)
+        opr.add()
     elif choice == "b" or choice == "B":
         print("Substration")
-        a = int(input("Input first number: "))
-        b = int(input("Input second number: "))
-        Operations.sub(a, b)
+        opr.sub()
     elif choice == "c" or choice == "C":
         print("Multiplication")
-        a = int(input("Input first number: "))
-        b = int(input("Input second number: "))
-        Operations.mul(a, b)
+        opr.mul()
     elif choice == "d" or choice == "D":
         print("Division")
-        a = int(input("Input first number: "))
-        b = int(input("Input second number: "))
-        Operations.div(a, b)
+        opr.div()
     elif choice == "e" or choice == "E":
         print("Program ended")
         quit()
