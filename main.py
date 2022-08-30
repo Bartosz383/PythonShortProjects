@@ -36,3 +36,6 @@ while True:
     elif choice == "e" or choice == "E":
         print("Program ended")
         quit()
+    else:
+        print("Invalid choice")
+
