@@ -26,17 +26,13 @@ while True:
     opr = Operations()
 
     if choice =="a" or choice == "A":
-        print("Addition")
-        opr.add()
+        print("Addition" + str(opr.add()))
     elif choice == "b" or choice == "B":
-        print("Substration")
-        opr.sub()
+        print("Substration" + opr.sub())
     elif choice == "c" or choice == "C":
-        print("Multiplication")
-        opr.mul()
+        print("Multiplication" + opr.mul())
     elif choice == "d" or choice == "D":
-        print("Division")
-        opr.div()
+        print("Division" +  opr.div())
     elif choice == "e" or choice == "E":
         print("Program ended")
         quit()
