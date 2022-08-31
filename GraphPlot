@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 4, 5, 6, 7, 8, 9, 10]
+y = [1, 2, 3, 6, 8, 10, 12, 14, 16]
+
+plt.plot(x, y)
+
+plt.xlabel('X Axis')
+
+plt.ylabel( 'Y Axis')
+
+plt.title('Test Graph')
+
+plt.show()
