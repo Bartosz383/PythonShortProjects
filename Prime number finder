@@ -8,6 +8,4 @@ def sieve(n):
                 candidate[j]=0
     return prime
 f = open("numbers.txt", "x")
-f.write(str(sieve(2400))[1:-1])
-f.close()
-print(*sieve(10), sep=", ")
+f.write('\n'.join(map(str, sieve(2400))))
