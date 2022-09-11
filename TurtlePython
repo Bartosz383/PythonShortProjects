@@ -8,8 +8,16 @@ def sun():
         left(170)
         if abs(pos()) < 1:
             break
-    end_fill()
-    done()
+
+def dashedLine():
+    for i in range(10):
+        forward(10)
+        penup()
+        forward(10)
+        pendown()
 
 if __name__ == "__main__":
-   sun()
+    # sun()
+    dashedLine()
+    end_fill()
+    done()
