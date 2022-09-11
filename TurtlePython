@@ -85,6 +85,20 @@ def otherSpiral(lineLength, n):
         forward(lineLength * line)
         back(lineLength * line)
         right(360/n)
+        
+def net(nArmStar, lineLength, step):
+    for i in range(nArmStar):
+        forward(lineLength)
+        back(lineLength)
+        right(360/nArmStar)
+    for side in range(15, 80, step):
+        forward(side)
+        right(720/nArmStar)
+        for i in range(nArmStar):
+            forward(side)
+            right(360/nArmStar)
+        left(720/nArmStar)
+        back(side)
 
 if __name__ == "__main__":
     # sun()
@@ -93,6 +107,7 @@ if __name__ == "__main__":
     # starAndPentagon()
     # birdKey(5)
     # grid(50, 6, 5)
-    otherSpiral(10, 21)
+    # otherSpiral(10, 21)
+    net(6, 100, 10)
     end_fill()
     done()
