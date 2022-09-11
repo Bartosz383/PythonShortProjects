@@ -64,11 +64,28 @@ def birdKey(n):
         bird()
         jump(30, 30)
 
+def grid(sizeSquare, nVertical, nHorizontal):
+    for w in range(nVertical):
+        for k in range(nHorizontal):
+            for i in range(4):
+                forward(sizeSquare)
+                right(90)
+            penup()
+            forward(sizeSquare)
+            pendown()
+        penup()
+        back(sizeSquare*nHorizontal)
+        right(90)
+        forward(sizeSquare)
+        left(90)
+        pendown()
+
 if __name__ == "__main__":
     # sun()
     # dashedLine()
     # rectangularFunction()
     # starAndPentagon()
-    birdKey(5)
+    # birdKey(5)
+    grid(50, 6, 5)
     end_fill()
     done()
