@@ -38,10 +38,37 @@ def starAndPentagon():
         forward(20)
         right(72)
 
+def bird():
+    left(30)
+    forward(20)
+    back(20)
+    right(60)
+    forward(20)
+    back(20)
+    left(30)
+
+def jump(a, b=0):
+    penup()
+    forward(a)
+    right(90)
+    forward(b)
+    left(90)
+    pendown()
+
+def birdKey(n):
+    left(90)
+    for i in range(n-1):
+        bird()
+        jump(-30, 30)
+    for i in range(n):
+        bird()
+        jump(30, 30)
+
 if __name__ == "__main__":
     # sun()
     # dashedLine()
     # rectangularFunction()
-    starAndPentagon()
+    # starAndPentagon()
+    birdKey(5)
     end_fill()
     done()
