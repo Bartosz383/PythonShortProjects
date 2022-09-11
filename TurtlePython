@@ -27,9 +27,21 @@ def rectangularFunction():
         forward(20)
         left(90)
 
+def starAndPentagon():
+    for i in range(5):
+        forward(20)
+        left(60)
+        forward(20)
+        right(120)
+        forward(20)
+        left(60)
+        forward(20)
+        right(72)
+
 if __name__ == "__main__":
     # sun()
     # dashedLine()
-    rectangularFunction()
+    # rectangularFunction()
+    starAndPentagon()
     end_fill()
     done()
