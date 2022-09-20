@@ -7,7 +7,7 @@ def startGame():
         pass
 
 def firstLook():
-    print('''
+    selectRoad = input('''
     You are in the forest. There are birches and oaks all around you. 
     You look around. You see two roads, one of them is wide but dark, the other is narrow. 
     Which one do you choose?
@@ -16,11 +16,15 @@ def firstLook():
     2. Narrow road
     ''')
 
-    selectRoad = input()
-
     if selectRoad == "1":
         print("\tYou have chosen the wide road")
-    if selectRoad == "2":
+
+        input('''
+        You reach the village, however, you feel under your skin that something is not right
+        ''')
+        
+
+    elif selectRoad == "2":
         print("\tyou have chosen the narrow road")
 
 startGame()
