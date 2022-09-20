@@ -1,9 +1,27 @@
 def startGame():
-    gameDescription = "This is a text game about a journey through the forest"
+    gameDescription = "\tThis is a text game about a journey through the forest\n"
     print(gameDescription)
     try:
-        input("Click any key to start")
+        input("\tPress enter to start\n")
     except SyntaxError:
         pass
 
+def firstLook():
+    print('''
+    You are in the forest. There are birches and oaks all around you. 
+    You look around. You see two roads, one of them is wide but dark, the other is narrow. 
+    Which one do you choose?
+    
+    1. Wide road
+    2. Narrow road
+    ''')
+
+    selectRoad = input()
+
+    if selectRoad == "1":
+        print("\tYou have chosen the wide road")
+    if selectRoad == "2":
+        print("\tyou have chosen the narrow road")
+
 startGame()
+firstLook()
