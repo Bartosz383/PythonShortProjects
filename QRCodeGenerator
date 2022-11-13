@@ -13,4 +13,4 @@ def generate_qrcode(text):
     img = qr.make_image(fill_color = "black", back_color = "white")
     img.save("DlaPawla.png")
 
-generate_qrcode(("https://www.youtube.com/watch?v=A1PAO3jgmXY"))
+generate_qrcode(("https://www.youtube.com/watch?v=dQw4w9WgXcQ"))
