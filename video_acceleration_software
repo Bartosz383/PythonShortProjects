@@ -1,0 +1,16 @@
+from moviepy.editor import VideoFileClip
+
+# Wczytaj wideo
+video_path = '1.mkv'
+clip = VideoFileClip(video_path)
+
+# Przyspieszanie wideo (2-krotnie w tym przypadku)
+przyspieszenie = 60
+accelerated_clip = clip.speedx(przyspieszenie)
+
+# Zapisz przyspieszone wideo
+output_path = 'przyspieszone_wideo.mkv'
+accelerated_clip.write_videofile(output_path, codec='libx264')
+
+# Zakończ proces
+accelerated_clip.close()
