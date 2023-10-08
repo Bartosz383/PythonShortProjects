@@ -1,0 +1,25 @@
+import os
+import av
+
+folder_path = "C:/your/path"
+
+for filename in os.listdir(folder_path):
+    file_path = os.path.join(folder_path, filename)
+
+    try:
+     
+        container = av.open(file_path)
+
+        frame = next(container.decode(video=0))
+
+        
+        png_path = os.path.join(folder_path, os.path.splitext(filename)[0] + '.png')
+
+   
+        frame.to_image().save(png_path)
+
+        print(f"Konwersja {filename} zakończona.")
+    except Exception as e:
+        print(f"Błąd podczas konwersji {filename}: {str(e)}")
+
+print("Konwersja zakończona.")
